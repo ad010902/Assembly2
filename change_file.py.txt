@@ -1,4 +1,4 @@
-with open("filename.txt", "r") as file:
+with open("/home/duongnguyen/scaffolds.filled_clean.fa", "r") as file:
     for line in file:
         # Split the line by '|' character
         parts = line.strip().split('|')
