@@ -1,5 +1,5 @@
 # Define the input and output file paths
-input_file_path = "/home/duonnguyen/scaffolds.filled_clean.fa"
+input_file_path = "/home/duongnguyen/scaffolds.filled_clean.fa"
 output_file_path = "/home/duongnguyen/scaffolds.filled_clean_format.fa"
 
 try:
