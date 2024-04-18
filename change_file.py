@@ -1,6 +1,6 @@
 # Define the input and output file paths
-input_file_path = "test.txt"
-output_file_path = "output_file.txt"
+input_file_path = "/home/duonnguyen/scaffolds.filled_clean.fa"
+output_file_path = "/home/duongnguyen/scaffolds.filled_clean_format.fa"
 
 try:
     # Open the input file for reading
