@@ -1,25 +1,23 @@
 # Define the input and output file paths
-input_file_path = "/home/duongnguyen/scaffolds.filled_clean.fa"
-output_file_path = "/home/duongnguyen/scaffolds.filled_clean_format.fa"
+input_file_path = "test.txt"
+output_file_path = "test_2.txt"
 
 try:
     # Open the input file for reading
     with open(input_file_path, "r") as input_file:
-        # Read the content of the input file
-        file_content = input_file.readlines()
+        # Read lines from the input file
+        lines = input_file.readlines()
 
-    # Process each line to remove ">" and strings that begin with "|"
-    processed_content = []
-    for line in file_content:
-        # Remove ">" from the line
-        line = line.replace(">", "")
-        # Remove strings that begin with "|"
-        line = " ".join(word for word in line.split() if not word.startswith("|"))
-        processed_content.append(line)
+    # Remove ">" , "|" and all characters after "|" in each line
+    modified_lines = []
+    for line in lines:
+        parts = line.split("|")
+        modified_line = parts[0].replace(">", "").strip() + "\n"
+        modified_lines.append(modified_line)
 
-    # Write the processed content to the output file
+    # Write the modified lines to the output file
     with open(output_file_path, "w") as output_file:
-        output_file.writelines(processed_content)
+        output_file.writelines(modified_lines)
 
     print("Processing completed. The output file has been created:", output_file_path)
 
