@@ -1,0 +1,11 @@
+# Open the file in read mode
+with open("/home/duongnguyen/scaffolds.filled_clean.fa", "r") as file:
+    for line in file:
+        # Assuming each line contains an integer value
+        value = int(line.strip())  # Convert the string to an integer
+
+        # Check if the value is not None before comparison
+        if value is not None and value > 10:
+            print("Value is greater than 10:", value)
+        elif value is None:
+            print("Encountered a None value")
